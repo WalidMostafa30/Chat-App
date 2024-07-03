@@ -1,0 +1,28 @@
+.ContactsCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: var(--main-shadow);
+
+  &:hover {
+    background-color: var(--main-hover);
+  }
+  
+  .ContactsCard__info {
+    width: 70%;
+    h4 {
+      margin-bottom: 10px;
+    }
+
+    h4,
+    p {
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

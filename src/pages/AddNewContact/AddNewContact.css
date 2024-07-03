@@ -1,0 +1,26 @@
+.AddNewContact {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-bg-color);
+  z-index: 1000;
+
+  &.open {
+    left: 0;
+  }
+
+  .AddNewContact__form {
+    width: 70%;
+  }
+
+  .AddNewContact__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}

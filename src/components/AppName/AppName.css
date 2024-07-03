@@ -1,0 +1,8 @@
+.AppName {
+  margin: auto;
+  color: var(--main-color);
+  font-size: 50px;
+  font-weight: bold;
+  font-family: cursive;
+  text-shadow: -3px 3px 3px white;
+}

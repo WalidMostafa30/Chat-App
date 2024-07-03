@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--main-text-color);
+  transition: 0.3s;
+}
+
+:root {
+  --main-color: #0fac5e;
+  --main-bg-color2: white;
+  --main-bg-color: #c6f0d5;
+  --main-text-color: black;
+  --main-p-color: #757575;
+  --main-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  --main-hover: rgba(211, 211, 211, 0.619);
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--main-bg-color) !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a,
+i {
+  margin: 0 !important;
+  list-style: none !important;
+  text-decoration: none !important;
+}
+
+.main-btn {
+  padding: 10px;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+
+  &:hover {
+    filter: saturate(0.5);
+  }
+}
+
+.circleBtn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+
+  svg {
+    font-size: 26px;
+
+    path {
+      color: white;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+    svg {
+      font-size: 22px;
+    }
+  }
+}
+
+.main-card {
+  background-color: var(--main-bg-color2);
+  box-shadow: var(--main-shadow);
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 20px;
+
+  input {
+    border: 1px solid var(--main-p-color);
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+
+.main-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  svg {
+    font-size: 26px;
+  }
+
+  &:hover {
+    background-color: var(--main-hover);
+  }
+
+  
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+    svg {
+      font-size: 22px;
+    }
+  }
+}
+
+.main-menu {
+    position: absolute;
+    top: calc(100% + 20px);
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--main-bg-color2);
+    width: max-content;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+    box-shadow: var(--main-shadow);
+    z-index: 100;
+
+    &.open {
+      display: flex;
+    }
+
+    h5 {
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: var(--main-hover);
+      }
+    }
+}

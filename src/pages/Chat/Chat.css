@@ -1,0 +1,48 @@
+.Chat {
+  width: 60%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--main-bg-color);
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 1000;
+
+    &.active {
+      left: 0;
+    }
+  }
+
+  .Chat__messages {
+    height: 100%;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+
+    &:hover {
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--main-color);
+      }
+    }
+  }
+
+  .add-chat-msg {
+    background-color: var(--main-bg-color2);
+    box-shadow: var(--main-shadow);
+    padding: 10px;
+    width: fit-content;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

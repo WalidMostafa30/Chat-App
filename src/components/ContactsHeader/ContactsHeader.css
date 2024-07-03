@@ -1,0 +1,20 @@
+.ContactsHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--main-p-color);
+
+  .ContactsHeader__userName {
+    color: var(--main-color);
+    font-family: monospace;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
