@@ -25,7 +25,7 @@ const ContactsHeader = ({ user }) => {
         <FontAwesomeIcon icon={faBars} />
 
         <div className={menu ? "main-menu open" : "main-menu"}>
-          <h5 onClick={navigate(`/`)}>Log Out</h5>
+          <h5 onClick={() => navigate(`/`)}>Log Out</h5>
           <h5 onClick={deleteUserHandle}>Delete Acount</h5>
         </div>
       </div>
