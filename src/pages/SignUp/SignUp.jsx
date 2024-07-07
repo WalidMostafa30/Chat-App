@@ -27,16 +27,12 @@ const SignUp = () => {
     };
 
     if (name.length > 0 && number.length > 0) {
-      if (number.length === 11) {
         if (findUser) {
           toast.error("this number has already been added to the Chat App");
         } else {
           dispatch(addUser(userData));
           navigate(`/home/${number}`);
         }
-      } else {
-        toast.error("number should be 11 characters");
-      }
     } else {
       toast.error("Please enter your name and number");
     }
